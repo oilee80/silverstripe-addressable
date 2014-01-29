@@ -1,0 +1,16 @@
+div.geo-location-map-area {
+	overflow: auto;
+}
+div.geo-location-map-area .field {
+	clear: left;
+	float: left;
+	padding-left: 0;
+	width: 30%;
+}
+div.geo-location-map-area .map_wrapper {
+	border: 1px solid #d0d3d5;
+	border-radius: 5px;
+	float: right;
+	height: 200px;
+	width: 60%;
+}
