@@ -27,7 +27,7 @@ class GeoLocationField extends CompositeField {
 	const	MIN_LATITUDE = -90,
 			MAX_LATITUDE = 90,
 			MIN_LONGITUDE = -180,
-			MAX_LONGITUDE = 180
+			MAX_LONGITUDE = 180,
 			MIN_MAP_ZOOM = 0,	// Whole World
 			MAX_MAP_ZOOM = 19;	// Greatest Detail
 
@@ -105,9 +105,9 @@ class GeoLocationField extends CompositeField {
 			$this->countryCodeField,
 			$mapArea,
 		) );
-		$fields->setAttribute( 'data-default-lat', static::$defaultLatitute );
-		$fields->setAttribute( 'data-default-lng', static::$defaultLongitude );
-		$fields->setAttribute( 'data-default-zoom', static::$defaultZoom );
+		$this->setAttribute( 'data-default-lat', static::$defaultLatitude );
+		$this->setAttribute( 'data-default-lng', static::$defaultLongitude );
+		$this->setAttribute( 'data-default-zoom', static::$defaultZoom );
 
 		parent::__construct( $fields );
 		$this->setName( $name );
