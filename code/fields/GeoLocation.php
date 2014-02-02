@@ -155,14 +155,6 @@ Debug::dump( __METHOD__ );die();
 			if( $markChanged ) $this->isChanged = true;
 	
 		} else if ( is_array( $value ) ) {
-
-			if ( array_key_exists( 'Name', $value ) ) {
-				$this->setStreetName( $value[ 'Name' ], $markChanged );
-			}
-	
-			if ( array_key_exists( 'Number', $value ) ) {
-				$this->setStreetNumber( $value[ 'Number' ], $markChanged );
-			}
 	
 			if( $markChanged ) $this->isChanged = true;
 	
@@ -176,6 +168,16 @@ Debug::dump( __METHOD__ );die();
 			$this->setLng( $latlng->Lng, $markChanged);
 		}
 	}
+
+	/**
+	 * API Response Status values
+	 */
+	const	API_RESPONSE_OK = 'OK',
+			API_RESPONSE_ZERO_RESULTS = 'ZERO_RESULTS',
+			API_RESPONSE_OVER_QUERY_LIMIT = 'OVER_QUERY_LIMIT',
+			API_RESPONSE_REQUEST_DENIED = 'REQUEST_DENIED',
+			API_RESPONSE_INVALID_REQUEST = 'INVALID_REQUEST',
+			API_RESPONSE_UNKNOWN_ERROR = 'UNKNOWN_ERROR';
 
 	/**
 	 * Use Google Maps API to determine the Latitude & Longtitude from the 

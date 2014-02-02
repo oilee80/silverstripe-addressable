@@ -51,3 +51,9 @@ As well a new Tab to the Admin Screen with corresponding Fields
 * Longitude
 
 A Google map will also be shown with a pointer on the set point
+
+By Default a request to lookup an Address is cached for
+
+* 1 day (Live)
+* 1 hour (Test)
+* 

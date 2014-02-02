@@ -244,12 +244,12 @@ Debug::dump( func_get_args() );die();
 		} else {
 
 		}
-Debug::dump( $addressObj );
-		var_dump( $this->getAddLine1Field()->Value() );
-Debug::dump( $this->getForm()->getRecord()->getField( $this->Name . '_StreetName' ) );die();
-Debug::dump( $validator );die();
+// Debug::dump( $addressObj );
+		// var_dump( $this->getAddLine1Field()->Value() );
+// Debug::dump( $this->getForm()->getRecord()->getField( $this->Name . '_StreetName' ) );die();
+// Debug::dump( $validator );die();
 // Debug::dump( $this->getRecord() );die();
-Debug::dump( $validator->getForm()->getRecord() );die();
+// Debug::dump( $validator->getForm()->getRecord() );die();
 
 	}
 }
@@ -365,7 +365,7 @@ class GoogleMaps_Address_API implements GeoLocationAddress {
 				}
 				switch( $geoCode->status ) {
 					case static::API_RESPONSE_OK:
-						new GoogleMaps_Address_API( $geoCode->results[0] );
+						$addressObj = new GoogleMaps_Address_API( $geoCode->results[0] );
 						return $addressObj;
 						break;
 					case static::API_RESPONSE_ZERO_RESULTS:
